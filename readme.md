@@ -28,7 +28,7 @@ I extensively commented the code for your convinience.
 
 Only issue i encountered was the fact that my custom exceptions where not being read by the class and therefore I was getting fatal error as the exception could not be found! I tried to find the reason behind this but at the time of writting this i did not. My guess it's something very simple but I have been staring it for so long I cannot find the issue. Perhaps after a come back from dinner :D
 
-### Testing
+## Testing
 
 I used PhpUnit to write my tests. I think I covered everything(?). 
 
