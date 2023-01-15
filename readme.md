@@ -32,7 +32,7 @@ Only issue i encountered was the fact that my custom exceptions where not being 
 
 I used PhpUnit to write my tests. I think I covered everything(?). 
 
-### Final Thoughts and Comments
+## Final Thoughts and Comments
 
 I really enjoyed this test actually. I spent on it more time that recommended but as Jonathan said.. This is what the weeneds are for! If i did miss something I would love to know, feedback is always greatly appriciated!
 
