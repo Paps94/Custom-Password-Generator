@@ -4,19 +4,19 @@ Below you will find my trail of thought as well as some key information on how I
 
 ## Getting Started
 
-First things first the url provided is invalid. Not sure if that was also part of the test. After checking again the one originally provided (https://github.com/krystal/code-tasks/blob/main/password-generator.md) was correct.. I guess I am incorrect!
+First things first I thought the url provided is invalid. After checking again it was correct and I am just stupid (https://github.com/krystal/code-tasks/blob/main/password-generator.md).
 
 After going though the instructions I tried to figure out if I had any questions but almost everyting seemed staight forward. Things I wasn't sure about but didn't want to bother Jonathan during the weekend goes as follow:
 
-'The function should produce an error in the event of invalid options' - Instead of errors I tried to catch exceptions. Not sure if the word errors was meant literally or more of a guideline.
-'The code should be packaged as a module which could be included into another library or application' - Again I am not sure if this means literally create a composer package or is more of a guide.
+⋅⋅* 'The function should produce an error in the event of invalid options' - Instead of errors I tried to catch exceptions. Not sure if the word errors was meant literally or more of a guideline.
+⋅⋅* 'The code should be packaged as a module which could be included into another library or application' - Again I am not sure if this means literally create a composer package or is more of a guide.
 
 While trying to find the best random php function comparing between functions like rand(), mt_rand() and random_int(). At the end I went for random_int which provides `... a cryptographically secure, uniformly selected integer` (https://www.php.net/manual/en/function.random-int) but this requires at least PHP 7. 
 
 ### Prerequisites
 
-Composer - Used it to install PhpUnit!
-PHP 7 - Due to reasons mentioned above.
+Composer - Used it to install PhpUnit! - Need to run `composer install` to be able to run the tests using `./vendor/bin/phpunit`
+PHP v7 - Due to reasons mentioned above.
 
 ### Over the top run down
 
