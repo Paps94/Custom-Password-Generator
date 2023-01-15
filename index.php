@@ -5,15 +5,12 @@ $generator = new PasswordGenerator();
 
 try {
   $generator
-  ->setLength(3)
+  ->setLength(10)
   ->setOptionValue('UPPERCASE', true)
   ->setOptionValue('LOWERCASE', true)
   ->setOptionValue('NUMBERS', true)
   ->setOptionValue('SYMBOLS', true)
-  ->setCount('LOWERCASE', 2)
-  ->setCount('UPPERCASE', 2)
-  ->setCount('NUMBERS', 1)
-  ->setCount('SYMBOLS', 1)
+  ->setCount('NUMBERS', 5)
   ;
 
   try {
