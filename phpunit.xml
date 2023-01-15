@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" stopOnFailure="false" bootstrap="Tests/bootstrap.php">
+  <coverage>
+    <include>
+      <directory>./</directory>
+    </include>
+
+    <exclude>
+      <directory>./Tests</directory>
+      <directory>./vendor</directory>
+    </exclude>
+
+    <report>
+      <clover outputFile="build/logs/clover.xml"/>
+    </report>
+  </coverage>
+
+  <testsuites>
+    <testsuite name="Password Generator test suite">
+      <directory suffix="Test.php">./Tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <logging/>
+</phpunit>
