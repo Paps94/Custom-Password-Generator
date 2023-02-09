@@ -1,17 +1,12 @@
-# Krystal Test Exercise
+# Custom Password Generator
 
 Below you will find my trail of thought as well as some key information on how I go about working on something new for the first time!
 
 ## Getting Started
 
-First things first I thought the url provided is invalid. After checking again it was correct and I am just stupid (https://github.com/krystal/code-tasks/blob/main/password-generator.md).
+I didn't have any particular idea or design of how I wanted to do this. At the end I decided I just need to not use any pseudo random generator hence why I went with random_int(). While trying to find the best random php function comparing between functions like rand(), mt_rand() and random_int(). At the end I went for random_int which provides `... a cryptographically secure, uniformly selected integer` (https://www.php.net/manual/en/function.random-int) but this requires at least PHP 7. 
 
-After going though the instructions I tried to figure out if I had any questions but almost everyting seemed staight forward. Things I wasn't sure about but didn't want to bother Jonathan during the weekend goes as follow:
-
-- 'The function should produce an error in the event of invalid options' - Instead of errors I tried to catch exceptions. Not sure if the word errors was meant literally or more of a guideline.
-- 'The code should be packaged as a module which could be included into another library or application' - Again I am not sure if this means literally create a composer package or is more of a guide.
-
-While trying to find the best random php function comparing between functions like rand(), mt_rand() and random_int(). At the end I went for random_int which provides `... a cryptographically secure, uniformly selected integer` (https://www.php.net/manual/en/function.random-int) but this requires at least PHP 7. 
+I do like the builder pattern approach when it comes to creating something that requires a lot of parementers as it is in this case with a password generator. With the builder pattern we create the object step by step using methods instead of the constructor.
 
 ### Prerequisites
 
@@ -20,9 +15,7 @@ PHP v7 - Due to reasons mentioned above.
 
 ### Over the top run down
 
-After setting up my wokring folder and created my files I started working on the test. Since it was asked to be packaged as a module I thought it was only applicable to create a class that you can instanciate and generate custom passwords on the fly.
-
-I extensively commented the code for your convinience.
+I extensively commented the code for anyone's convinience. I always try to since I am also gonna need to read said comments months down the line when I re look at this project! Who knows if I feel motivated I might turn this into a composer downloadable module you can simply add to your dependancies and freely use!
 
 ## Issues I did not think of
 
@@ -34,6 +27,6 @@ I used PhpUnit to write my tests. I think I covered everything(?).
 
 ## Final Thoughts and Comments
 
-I really enjoyed this test actually. I spent on it more time that recommended but as Jonathan said.. This is what the weeneds are for! If i did miss something I would love to know, feedback is always greatly appriciated!
+At this current stage I know that if you request a very large password it will probably take a good while for the class to generate one based on the current logic. If this is a requirement for anyone I would suggest instead of doing a while loop and validating the generated password you can take the parameters given to the class (aka 2 numbers, 2 symbols) add 2 random numbers and 2 random symbols into your available characters array. Fill the rest with more random lowercase and uppercase letters (if those are allowed) and boom no more do while loops!
 
   - Hat tip to my cats who turned off my pc more times I could count! They made me more resilient than ever since I did not toss them off the 8th floor right into the Thames! I will get an external power button to avoid that from happening in the future of course!
